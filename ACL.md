@@ -44,16 +44,21 @@ Do telnet for access R1 to R2
 R1
 ``
 line vty 0 4
-  password cisco
-  login
+ password cisco
+ login
 ```  
 R2
-telnet 192.168.1.1  not work 
-with the help of ACL we do the transfer from out to in.
+
+Try telnet 192.168.1.1  not work 
+
+with the help of ACL we do the transfer from out to in
+
 FW
+```
 access-list myacl extended permit tcp host 200.10.10.1 host 192.168.1.1 eq 23	
 exit
 access-group myacl in interface outside
+```
 
 now ping telnet 192.168.1.1  its work.
 
