@@ -1,3 +1,5 @@
+# ACL IN ASA-FIREWALL
+
 
 # LAB
 
@@ -5,22 +7,28 @@
 
 We want to communicate outside to inside via telnet
 
-...
- R1
+R1
+
+```
   int fa0/1
   ip address 192.168.1.1 255.255.255.0
   no shut
   ip route 0.0.0.0 0.0.0.0 192.168.1.100
   exit
-  ...
+```
+  
 R2
+```
 int fa0/0
-  ip address 200.10.10.1 255.255.255.0
-  no shut
-  ip route 0.0.0.0 0.0.0.0 200.10.10.100
-  exit
+ip address 200.10.10.1 255.255.255.0
+no shut
+ip route 0.0.0.0 0.0.0.0 200.10.10.100
+exit
+```
+
 FW
-hostname ASA
+```
+  hostname ASA
   int e0
   ip address 192.168.1.100 255.255.255.0
   nameif inside
@@ -30,14 +38,15 @@ hostname ASA
   ip address 200.10.10.100 255.255.255.0
   nameif outside
   no shutdown
-  
+ ``` 
 Do telnet for access R1 to R2
 
 R1
+``
 line vty 0 4
   password cisco
   login
-  
+```  
 R2
 telnet 192.168.1.1  not work 
 with the help of ACL we do the transfer from out to in.
