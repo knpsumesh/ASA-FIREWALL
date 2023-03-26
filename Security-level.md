@@ -48,6 +48,7 @@ Because the ping work based on icmp protocol . once R1 ping, hits on firewall an
 2) in firewall icmp  inspection is not on by default so that connection tables not created
 
 By default icmp protocol is not enabled we need to fix the problem by enable it.
+
 Fw
 ```
 Fixup protocol icmp
