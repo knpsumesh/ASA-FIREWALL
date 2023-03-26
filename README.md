@@ -62,3 +62,12 @@ access-list myacl2 extended permit icmp any any
 access-group myacl2 global
 
 Now ping R2 to R1 its work becz icmp is enabled
+
+
+R2
+...
+int fa0/1
+ip address 192.1689.1.100 sm
+no shut
+...
+
