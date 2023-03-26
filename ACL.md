@@ -63,7 +63,11 @@ access-group myacl in interface outside
 now ping telnet 192.168.1.1  its work.
 
 (reference:) how we can allow ICMP traffic in all interface help of ACL
+
+FW
+```
 access-list myacl2 extended permit icmp any any
 access-group myacl2 global
+```
 
 Now ping R2 to R1 its work becz icmp is enabled
