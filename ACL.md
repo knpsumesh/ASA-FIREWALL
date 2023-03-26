@@ -62,7 +62,7 @@ access-group myacl in interface outside
 
 now ping telnet 192.168.1.1  its work.
 
-(reference:) how we can allow ICMP traffic in all interface help of ACL
+$\mathbb{\color{red}{ reference }}$ how we can allow ICMP traffic in all interface help of ACL
 
 FW
 ```
