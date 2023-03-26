@@ -5,14 +5,15 @@
 
 We want to communicate outside to inside via telnet
 
-...
+
  R1
+```
   int fa0/1
   ip address 192.168.1.1 255.255.255.0
   no shut
   ip route 0.0.0.0 0.0.0.0 192.168.1.100
   exit
-  ...
+```
 R2
 int fa0/0
   ip address 200.10.10.1 255.255.255.0
