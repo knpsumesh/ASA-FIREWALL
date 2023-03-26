@@ -79,14 +79,13 @@ int e1
   nameif DMZ2
   security-level 50
   exit
-  ```
-  
-   int e2
+  int e2
   ip address 172.16.1.100 255.255.255.0
   no shut
   nameif DMZ1
   security-level 50
   exit
+  ```
 
 Then ping to R4 to R3 , not working ? ? ?  becz same security-level
 FW
