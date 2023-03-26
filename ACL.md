@@ -42,7 +42,7 @@ FW
 Do telnet for access R1 to R2
 
 R1
-``
+```
 line vty 0 4
  password cisco
  login
